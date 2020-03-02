@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 
-import HelloMessage from "./HelloMessage";
+import App from "./App";
 
 const render = Component => {
   ReactDOM.render(
@@ -13,11 +13,11 @@ const render = Component => {
   );
 };
 
-render(HelloMessage);
+render(App);
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept("./HelloMessage", () => {
-    render(HelloMessage);
+  module.hot.accept("./App", () => {
+    render(App);
   });
 }
