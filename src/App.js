@@ -32,13 +32,12 @@ export default class App extends React.Component{
         });
           
      }
-     deleteItem(key){
-         const filteredItems = this.state.text.filter(item =>
-            item.id!==key);
-            this.setState({
-                text:filteredItems
-            });
-     }
+     deleteItem = (props)=> {
+            this.state.text.splice(props, 1)
+            this.setState({text: this.state.text})
+           
+        }
+     
       
     render(){
         return (<div>
